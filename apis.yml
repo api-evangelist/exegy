@@ -1,0 +1,51 @@
+aid: exegy
+url: https://raw.githubusercontent.com/api-evangelist/exegy/refs/heads/main/apis.yml
+name: Exegy
+kind: company
+description: Exegy is a St. Louis-based provider of low-latency market data
+  infrastructure, trading platforms, and predictive trading signals for capital
+  markets, backed by Marlin Equity Partners after its 2021 merger with Vela
+  Trading Systems and subsequent acquisitions of Enyx and NovaSparks. The firm
+  sells managed FPGA ticker plants (Exegy Nexus), software feed handlers (SMDS,
+  nxFeed), the Axiom normalized data feed, the Metro options trading platform,
+  and market access products (nxAccess, FrontTrade, SREX). Client access to
+  normalized real-time and historical market data is delivered through the
+  proprietary Exegy Client API (XCAPI), a C++/C#/Java library for Linux and
+  Windows, while Metro exposes the Subway socket API and Freeway algorithmic
+  API - none of which are publicly documented HTTP APIs. All developer
+  documentation sits behind customer logins (Exegy Customer Portal, Object
+  Trading DMA portal, MarketDataPeaks), making this an entirely sales-gated,
+  entitlement-managed offering with no self-serve API surface.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial
+- Market Data
+- Trading
+- Real-Time
+- Low Latency
+- FPGA
+- Options
+- Feed Handlers
+- Order Book
+created: '2026-07-21'
+modified: '2026-07-21'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://www.exegy.com/
+- type: Portal
+  url: https://exegy.com/portal
+- type: Blog
+  url: https://www.exegy.com/category/insights/
+- type: Support
+  url: https://www.exegy.com/support/
+- type: PrivacyPolicy
+  url: https://www.exegy.com/legal-patents-privacy/
+- type: GitHubOrganization
+  url: https://github.com/exegy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/exegy
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

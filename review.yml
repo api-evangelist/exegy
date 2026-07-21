@@ -1,0 +1,112 @@
+aid: exegy
+name: Exegy
+review:
+  question: Does Exegy expose a public, documented API surface a developer can
+    self-serve onboard against?
+  answer: false
+  date: '2026-07-21'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Exegy is a fully sales-gated, entitlement-managed market data
+    infrastructure vendor with no public developer portal and no publicly
+    documented HTTP API. Client access to normalized real-time and
+    historical market data is via the proprietary Exegy Client API (XCAPI),
+    a C++/C#/Java library for Linux and Windows delivered against Exegy's
+    managed ticker plant appliances and feed handlers - not a REST or
+    WebSocket service a developer can sign up for. The Metro options
+    trading platform (from the Vela/OptionsCity lineage) is extensible via
+    the Subway socket API and the Freeway low-latency algorithmic API, both
+    documented only for customers. All documentation logins listed on
+    exegy.com/resources are gated: the Exegy Customer Portal
+    (exegy.com/portal), Metro Trade Limit Admin (risk.optionscity.com),
+    Direct Market Access documentation (portal.objecttrading.com:8080), and
+    MarketDataPeaks (marketdatapeaks.net/login). Conventional developer
+    hostnames do not resolve (developer.exegy.com, docs.exegy.com,
+    api.exegy.com) and exegy.com/apis is a 404. The GitHub org
+    github.com/exegy contains a single public repo (brand logos) - no SDKs
+    or specs. No pricing page, no self-serve signup, no free tier, no
+    public status page, and no public OpenAPI/AsyncAPI artifacts were
+    found, so no specs were harvested. Ownership: Exegy Incorporated is a
+    Marlin Equity Partners portfolio company, formed in its current shape
+    by the 2021 merger with Vela Trading Systems and expanded by the
+    acquisitions of Enyx (FPGA trading, 2021) and NovaSparks (FPGA market
+    data, announced 2025). Honest catalog posture: identity-only entry
+    with an empty apis[] list.
+  commercialPosture: sales-gated
+  authModel: customer entitlements (no public API key or OAuth signup)
+  deliveryChannels:
+    - channel: XCAPI client library
+      note: Proprietary Exegy Client API in C++, C#, and Java on Linux and
+        Windows; Level 1 and Level 2 (market-by-price) views, composite
+        views (UBBO, UQM, UCPB), and Signum signals as extra fields.
+      documented: public marketing pages only; reference docs gated
+    - channel: Socket API (Subway)
+      note: Metro platform socket API for client-system integration.
+      documented: customer-only
+    - channel: Algorithmic API (Freeway)
+      note: Metro low-latency embedded/algo API for custom applications.
+      documented: customer-only
+    - channel: Managed feed / appliance
+      note: FPGA ticker plants (Exegy Nexus), nxFeed, SMDS software feed
+        handlers, and the Axiom normalized consolidated feed delivered as
+        managed infrastructure, not over public HTTP.
+      documented: public marketing pages only
+  probes:
+    - url: https://exegy.com
+      status: 200
+    - url: https://developer.exegy.com
+      status: unresolvable
+    - url: https://docs.exegy.com
+      status: unresolvable
+    - url: https://api.exegy.com
+      status: unresolvable
+    - url: https://exegy.com/apis
+      status: 404
+    - url: https://exegy.com/developers
+      status: 404
+    - url: https://exegy.com/portal
+      status: 200 (login-gated customer portal)
+    - url: https://github.com/exegy
+      status: 200 (one public repo, logos only)
+    - url: https://www.marketdatapeaks.net
+      status: 200 (login link for full access)
+    - url: https://www.exegy.com/category/insights/
+      status: 200
+    - url: https://www.exegy.com/legal-patents-privacy/
+      status: 200
+    - url: https://status.exegy.com
+      status: 503
+  openapiHarvested: false
+sources:
+  - url: https://www.exegy.com/
+    type: Website
+    note: Product portfolio - market data (Nexus, ticker plant, nxFeed,
+      SMDS, Axiom normalized feed), market access (nxAccess, SREX,
+      FrontTrade, Metro), infrastructure (nxFramework, nxLink); mentions
+      NovaSparks acquisition; no public API docs or pricing.
+  - url: https://www.exegy.com/resources/
+    type: Documentation
+    note: Login section lists all four documentation portals (Exegy
+      Customer Portal, Metro Trade Limit Admin, Object Trading DMA docs,
+      MarketDataPeaks) - every one behind a login.
+  - url: https://www.exegy.com/products/metro/
+    type: Documentation
+    note: Metro extensibility via Subway socket API and Freeway
+      algorithmic API; Metro Storefront for partner-built apps.
+  - url: https://www.exegy.com/products/consolidatedfeed/
+    type: Documentation
+    note: Axiom Data Feed - market data as a service, accessed via XCAPI.
+  - url: https://www.marlinequity.com/portfolio/exegy/
+    type: Ownership
+    note: Exegy is a Marlin Equity Partners portfolio company; Marlin
+      backed the 2021 Exegy-Vela merger and the NovaSparks add-on.
+actions:
+  openapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public API documentation or machine-readable specs exist to
+    harvest, so apis[] is intentionally empty and no openapi/ artifacts
+    were created. The profile records verified identity, ownership, and
+    the gated delivery channels so the catalog honestly represents
+    Exegy's enterprise, sales-gated posture.
