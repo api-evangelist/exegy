@@ -16,7 +16,18 @@ description: Exegy is a St. Louis-based provider of low-latency market data
   documentation sits behind customer logins (Exegy Customer Portal, Object
   Trading DMA portal, MarketDataPeaks), making this an entirely sales-gated,
   entitlement-managed offering with no self-serve API surface.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/exegy.png
 tags:
 - Financial
 - Market Data
@@ -28,10 +39,16 @@ tags:
 - Feed Handlers
 - Order Book
 created: '2026-07-21'
-modified: '2026-07-21'
+modified: '2026-07-22'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/exegy-domain-security.yml
+- type: LLMsTxt
+  url: llms/exegy-llms.txt
+- type: Packages
+  url: packages/exegy-packages.yml
 - type: Website
   url: https://www.exegy.com/
 - type: Portal

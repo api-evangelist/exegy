@@ -1,0 +1,25 @@
+generated: '2026-07-22'
+method: probed
+source: live probe of /.well-known/* on Exegy hosts (2026-07-22)
+description: >-
+  Probe of the /.well-known/ discovery surface on Exegy's public web host.
+  Exegy publishes no machine-readable discovery documents — every probed path
+  returned 404. Absence is recorded as valid data; no WellKnown rating pointer
+  is emitted because no catalog was found. Conventional API hostnames
+  (api.exegy.com, developer.exegy.com, docs.exegy.com) do not resolve, so
+  www.exegy.com is the only probeable host. Client access is via the
+  proprietary XCAPI library under customer entitlements, not OAuth/OIDC, so
+  the absence of openid-configuration / oauth-authorization-server is
+  consistent with the delivery model.
+hosts:
+  - host: https://www.exegy.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404}
+      - {path: /.well-known/openid-configuration, status: 404}
+      - {path: /.well-known/oauth-authorization-server, status: 404}
+      - {path: /.well-known/api-catalog, status: 404}
+      - {path: /.well-known/ai-plugin.json, status: 404}
+unresolvable_hosts:
+  - api.exegy.com
+  - developer.exegy.com
+  - docs.exegy.com

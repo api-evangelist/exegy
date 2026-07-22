@@ -1,0 +1,33 @@
+generated: '2026-07-22'
+method: searched
+source: registry searches (npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist, crates.io) + github.com/exegy
+description: >-
+  Exegy publishes no first-party client libraries on any public package
+  registry. The proprietary Exegy Client API (XCAPI) — C++, C#, and Java
+  libraries for Linux and Windows — is distributed only to entitled customers
+  through the gated Exegy Customer Portal, and the Metro platform's Subway
+  socket API and Freeway algorithmic API are likewise customer-only. The
+  GitHub org (github.com/exegy) contains a single public repo of brand logos,
+  no SDKs or specs. The only public packages are unofficial community Rust
+  bindings for XCAPI.
+packages:
+  - language: rust
+    registry: crates.io
+    name: rxegy
+    url: https://crates.io/crates/rxegy
+    install: cargo add rxegy
+    official: false
+    note: Unofficial Exegy XCAPI bindings in Rust (community, github.com/jcape/rxegy)
+  - language: rust
+    registry: crates.io
+    name: rxegy-sys
+    url: https://crates.io/crates/rxegy-sys
+    install: cargo add rxegy-sys
+    official: false
+    note: Unofficial Exegy XCAPI FFI layer for Rust (community)
+first_party:
+  - name: XCAPI (Exegy Client API)
+    languages: [c++, c#, java]
+    platforms: [linux, windows]
+    distribution: customer-only via Exegy Customer Portal (https://exegy.com/portal)
+    registry: none
