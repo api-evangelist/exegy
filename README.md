@@ -1,4 +1,4 @@
-# Exegy (exegy)
+# Exegy
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,40 +66,81 @@
 
 Exegy is a St. Louis-based provider of low-latency market data infrastructure, trading platforms, and predictive trading signals for capital markets, backed by Marlin Equity Partners after its 2021 merger with Vela Trading Systems and subsequent acquisitions of Enyx and NovaSparks. The firm sells managed FPGA ticker plants (Exegy Nexus), software feed handlers (SMDS, nxFeed), the Axiom normalized data feed, the Metro options trading platform, and market access products (nxAccess, FrontTrade, SREX). Client access to normalized real-time and historical market data is delivered through the proprietary Exegy Client API (XCAPI), a C++/C#/Java library for Linux and Windows, while Metro exposes the Subway socket API and Freeway algorithmic API - none of which are publicly documented HTTP APIs. All developer documentation sits behind customer logins (Exegy Customer Portal, Object Trading DMA portal, MarketDataPeaks), making this an entirely sales-gated, entitlement-managed offering with no self-serve API surface.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/exegy/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/exegy/refs/heads/main/apis.yml)
+**Areas:** Finance · Market Data · Trading · Real-Time · Low Latency · FPGA · Options · Feed Handlers · Order Book
 
-## Tags
+## Exegy on APIs.io
 
-- Financial
-- Market Data
-- Trading
-- Real-Time
-- Low Latency
-- FPGA
-- Options
-- Feed Handlers
-- Order Book
+Everything profiled for Exegy is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/exegy/](https://apis.io/providers/exegy/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-07-21
-- **Modified:** 2026-07-21
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Security (1)
 
-No public, documented API products are cataloged. Exegy's market data and trading interfaces - the Exegy Client API (XCAPI), Metro's Subway socket API and Freeway algorithmic API, and the Object Trading direct market access platform - are proprietary, entitlement-managed products whose documentation is only available behind customer logins. There is no public developer portal, no self-serve signup, and no publicly downloadable OpenAPI, AsyncAPI, or Postman artifacts (probed 2026-07-21: developer.exegy.com, docs.exegy.com, and api.exegy.com do not resolve; exegy.com/apis returns 404).
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Exegy Domain Security](https://apis.io/security/exegy/exegy-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.exegy.com/)
-- [Portal](https://exegy.com/portal)
-- [Blog](https://www.exegy.com/category/insights/)
 - [Support](https://www.exegy.com/support/)
-- [Privacy Policy](https://www.exegy.com/legal-patents-privacy/)
-- [GitHub Organization](https://github.com/exegy)
-- [LinkedIn](https://www.linkedin.com/company/exegy)
+- [Blog](https://www.exegy.com/category/insights/)
+- [Privacy policy](https://www.exegy.com/legal-patents-privacy/)
+- [GitHub](https://github.com/exegy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.6** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.3** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/exegy/](https://apis.io/providers/exegy/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Exegy: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/exegy/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
